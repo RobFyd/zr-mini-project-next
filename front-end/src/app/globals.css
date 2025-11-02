@@ -8,6 +8,9 @@
     --color-theme-main: #056943;
     --color-theme-price: #c60c0c;
     --color-theme-gray: #f4f4f4;
+    /* --color-theme-light-gray: #f9f9f9;
+    --color-theme-border: #e1e1e1;
+    --color-theme-shadow: rgba(0, 0, 0, 0.1); */
 }
 
 * {
