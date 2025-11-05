@@ -1,4 +1,5 @@
 "use client";
+
 import { TopBar } from "../TopBar/TopBar";
 import { MainMenu } from "../MainMenu/MainMenu";
 import { Logo } from "../Logo/Logo";
@@ -8,11 +9,14 @@ import { Footer } from "../Footer/Footer";
 import { MainContent } from "../MainContent/MainContent";
 import { CurrencySelector } from "../CurrencySelector/CurrencySelector";
 import { CurrencyContext } from "@/app/contexts/CurrencyContext";
+import { CURRENCIES } from "@/app/constants/currencies";
+import { useState } from "react";
 
 export function Layout({ children }) {
+  const [selectedCurrency, setSelectedCurrency] = useState(CURRENCIES.PLN);
   return (
     <>
-      <CurrencyContext.Provider>
+      <CurrencyContext.Provider value={[selectedCurrency, setSelectedCurrency]}>
         <MainContent>
           <TopBar>
             <MainMenu />
